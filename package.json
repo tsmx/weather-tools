@@ -9,13 +9,20 @@
   },
   "author": "tsmx <dev@tsmx.net>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
   "keywords": [
-      "weather",
-      "wind chill",
-      "dew point",
-      "heat index",
-      "fahrenheit",
-      "celsius",
-      "wind direction"
-  ]
+    "weather",
+    "wind chill",
+    "dew point",
+    "heat index",
+    "fahrenheit",
+    "celsius",
+    "wind direction"
+  ],
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }

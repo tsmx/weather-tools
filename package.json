@@ -1,0 +1,20 @@
+{
+  "name": "@tsmx/weather-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "weather-tools.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsmx/weather-tools.git"
+  },
+  "author": "tsmx <dev@tsmx.net>",
+  "license": "MIT",
+  "keywords": [
+      "weather",
+      "wind chill",
+      "dew point",
+      "heat index",
+      "fahrenheit",
+      "celsius"
+  ]
+}

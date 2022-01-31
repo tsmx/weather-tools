@@ -1,7 +1,7 @@
 {
   "name": "@tsmx/weather-tools",
   "version": "1.0.0",
-  "description": "",
+  "description": "Toolset for calculating wind chill, dew point, heat index and more.",
   "main": "weather-tools.js",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
       "dew point",
       "heat index",
       "fahrenheit",
-      "celsius"
+      "celsius",
+      "wind direction"
   ]
 }

@@ -3,6 +3,7 @@ describe('weather-tools wind chill test suite', () => {
     const wt = require('../weather-tools');
 
     // Reference: https://www.wpc.ncep.noaa.gov/html/heatindex.shtml
+    // Note: due to different rounding algorithms a difference of +/-1 can occur
 
     const heatIndexRefCelsius = [
         { temp: 27, humidity: 40, hi: 27 },

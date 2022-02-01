@@ -4,6 +4,8 @@ describe('weather-tools dew point test suite', () => {
 
     const round1 = require('./test-helpers').roundToOne;
 
+    // Reference: https://www.wetterochs.de/wetter/feuchte.html
+
     it('tests dew point calculation for a temperature > 0 degrees', () => {
         expect(round1(wt.dewPoint(2.5, 65))).toEqual(-3.4);
     });

@@ -4,27 +4,27 @@ describe('weather-tools wind chill test suite', () => {
 
     const round1 = require('./test-helpers').roundToOne;
 
-    it('tests windchill calculation for celsius/kmh', () => {
+    it('tests wind chill calculation for celsius/kmh', () => {
         expect(round1(wt.windchillCelsius(2, 11))).toEqual(-1.2);
     });
 
-    it('tests windchill calculation for celsius/kmh with a too high temperature', () => {
+    it('tests wind chill calculation for celsius/kmh with a too high temperature', () => {
         expect(isNaN(wt.windchillCelsius(10.1, 11))).toBeTruthy();
     });
 
-    it('tests windchill calculation for celsius/kmh with a too low wind speed', () => {
+    it('tests wind chill calculation for celsius/kmh with a too low wind speed', () => {
         expect(round1(wt.windchillCelsius(2, 3.2))).toEqual(2);
     });
 
-    it('tests windchill calculation for fahrenheit/mph', () => {
+    it('tests wind chill calculation for fahrenheit/mph', () => {
         expect(round1(wt.windchillFahrenheit(15, 4))).toEqual(8.4);
     });
 
-    it('tests windchill calculation for fahrenheit/mph with a too high temperature', () => {
+    it('tests wind chill calculation for fahrenheit/mph with a too high temperature', () => {
         expect(isNaN(wt.windchillFahrenheit(51, 4))).toBeTruthy();
     });
 
-    it('tests windchill calculation for fahrenheit/mph with a too low wind speed', () => {
+    it('tests wind chill calculation for fahrenheit/mph with a too low wind speed', () => {
         expect(round1(wt.windchillFahrenheit(15, 2))).toEqual(15);
     });
 

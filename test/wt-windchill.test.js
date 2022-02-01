@@ -4,6 +4,8 @@ describe('weather-tools wind chill test suite', () => {
 
     const round1 = require('./test-helpers').roundToOne;
 
+    // Reference: https://www.weather.gov/epz/wxcalc_windchill
+
     it('tests wind chill calculation for celsius/kmh', () => {
         expect(round1(wt.windchillCelsius(2, 11))).toEqual(-1.2);
     });

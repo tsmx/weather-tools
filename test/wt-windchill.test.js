@@ -16,4 +16,12 @@ describe('weather-tools wind chill test suite', () => {
         expect(round1(wt.windchillCelsius(2, 3.2))).toEqual(2);
     });
 
+    it('tests windchill calculation for fahrenheit/mph with a too high temperature', () => {
+        expect(isNaN(wt.windchillFahrenheit(51, 4))).toBeTruthy();
+    });
+
+    it('tests windchill calculation for fahrenheit/mph with a too low wind speed', () => {
+        expect(round1(wt.windchillFahrenheit(15, 2))).toEqual(15);
+    });
+
 });

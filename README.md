@@ -16,10 +16,11 @@ Provides the following functionalities:
 
 ## Usage
 
+Example: calculating the dew point in Celsius from given humidity `hum` and temperature in Fahrenheit `tempF`.
+
 ```js
 const wt = require('@tsmx/weather-tools');
 
-// calculate dew point in Celsius from given humidity (hum) and temperature in Fahrenheit (tempF)
 const tempC = wt.fahrenheitToCelsius(tempF);
 const dewPoint = wt.dewPoint(tempC, hum);
 ```

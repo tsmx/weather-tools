@@ -31,17 +31,117 @@ const dewPoint = wt.dewPoint(tempC, hum);
 
 #### windchillCelsius(temp, speed)
 
+Calculates the wind chill temperature in degrees Celsius.
+
+**Remark**
+Note that wind chill calculation is only feasible for low temperatures <= 10 degrees Celsius and a minimum wind speed > 4.8 km/h.
+
+Returns:
+- `NaN` if `temp` is greater than 10.0 degress Celsius
+- `temp` if `speed` is less than or equal to 4.8 km/h
+- the calculated wind chill otherwise
+
+##### temp
+
+Type: `number`
+
+The current temperature in degrees Celsius.
+
+##### speed
+
+Type: `number`
+
+The current wind speed in km/h.
+
 #### windchillFahrenheit(temp, speed)
+
+Calculates the wind chill temperature in degrees Fahrenheit.
+
+**Remark**
+Note that wind chill calculation is only feasible for low temperatures <= 50 degrees Fahrenheit and a minimum wind speed > 3.0 mph.
+
+Returns:
+- `NaN` if `temp` is greater than 50.0 degress Fahrenheit
+- `temp` if `speed` is less than or equal to 3.0 mph
+- the calculated wind chill otherwise
+
+##### temp
+
+Type: `number`
+
+The current temperature in degrees Fahrenheit.
+
+##### speed
+
+Type: `number`
+
+The current wind speed in mph.
 
 ### Dew point functions
 
 #### dewPoint(temp, humidity)
 
+Calculates the dew point in degrees Celsius.
+
+##### temp
+
+Type: `number`
+
+The current temperature in degrees Celsius.
+
+##### humidity
+
+Type: `number`
+
+The current humidity in percent (0.0 - 100.0).
+
 ### Heat index functions
+
+#### heatIndexFahrenheit(temp, humidity)
+
+Calculates the heat index in degrees Fahrenheit.
+
+**Remark**
+Note that heat index calculation is only feasible for high temperatures >= 80 degrees Fahrenheit and a minimum humidity >= 40%.
+
+Returns:
+- `NaN` if `temp` is lower than 80.0 degress Fahrenheit or `humidity` is lower than 40.0
+- the calculated heat index otherwise
+
+##### temp
+
+Type: `number`
+
+The current temperature in degrees Fahrenheit.
+
+##### humidity 
+
+Type: `number`
+
+The current humidity in percent (0.0 - 100.0).
 
 #### heatIndexCelsius(temp, humidity)
 
-#### heatIndexFahrenheit(temp, humidity)
+Calculates the heat index in degrees Celsius.
+
+**Remark**
+Note that heat index calculation is only feasible for high temperatures >= 27 degrees Celsius and a minimum humidity >= 40%.
+
+Returns:
+- `NaN` if `temp` is lower than 27. degress Celsius or `humidity` is lower than 40.0
+- the calculated heat index otherwise
+
+##### temp
+
+Type: `number`
+
+The current temperature in degrees Celsius.
+
+##### humidity 
+
+Type: `number`
+
+The current humidity in percent (0.0 - 100.0).
 
 ### Conversion functions
 

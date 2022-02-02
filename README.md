@@ -27,6 +27,42 @@ const dewPoint = wt.dewPoint(tempC, hum);
 
 ## API
 
-Coming soon...
+### Wind chill functions
 
+#### windchillCelsius(temp, speed)
 
+#### windchillFahrenheit(temp, speed)
+
+### Dew point functions
+
+#### dewPoint(temp, humidity)
+
+### Heat index functions
+
+#### heatIndexCelsius(temp, humidity)
+
+#### heatIndexFahrenheit(temp, humidity)
+
+### Conversion functions
+
+#### degreesToDirection(deg)
+
+#### fahrenheitToCelsius(fahrenheit)
+
+#### celsiusToFahrenheit(celsius)
+
+#### mphToKmh(mph)
+
+#### kmhToMph(kmh)
+
+## References
+
+The implementations in this library are based on the following references.
+
+[Wind chill formulas](https://en.wikipedia.org/wiki/Wind_chill)
+
+[Dew point formulas](https://www.wetterochs.de/wetter/feuchte.html)
+
+[Heat index formulas](https://en.wikipedia.org/wiki/Heat_index)
+
+[Wind/compass direction algorithm](https://www.campbellsci.com/blog/convert-wind-directions)

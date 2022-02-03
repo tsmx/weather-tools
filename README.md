@@ -178,11 +178,43 @@ Number of degrees to be converted
 
 #### fahrenheitToCelsius(fahrenheit)
 
+Converts Fahrenheit to Celsius.
+
+##### fahrenheit
+
+Type: `number`
+
+The value to be converted in degrees Fahrenheit
+
 #### celsiusToFahrenheit(celsius)
+
+Converts Celsius to Fahrenheit.
+
+##### ceslsius
+
+Type: `number`
+
+The value to be converted in degrees Celsius
 
 #### mphToKmh(mph)
 
+Converts MPH to KMH.
+
+##### mph
+
+Type: `number`
+
+The value to be converted in MPH.
+
 #### kmhToMph(kmh)
+
+Converts KMH to MPH.
+
+##### kmh
+
+Type: `number`
+
+The value to be converted in KMH.
 
 ## References
 

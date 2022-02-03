@@ -33,8 +33,7 @@ const dewPoint = wt.dewPoint(tempC, hum);
 
 Calculates the wind chill temperature in degrees Celsius.
 
-**Remark:**
-Note that wind chill calculation is only feasible for low temperatures <= 10 degrees Celsius and a minimum wind speed > 4.8 km/h.
+**Note:** Wind chill calculation is only feasible for low temperatures <= 10 degrees Celsius and a minimum wind speed > 4.8 km/h.
 
 Returns:
 - `NaN` if `temp` is greater than 10.0 degress Celsius
@@ -57,8 +56,7 @@ The current wind speed in km/h.
 
 Calculates the wind chill temperature in degrees Fahrenheit.
 
-**Remark:**
-Note that wind chill calculation is only feasible for low temperatures <= 50 degrees Fahrenheit and a minimum wind speed > 3.0 mph.
+**Note:** Wind chill calculation is only feasible for low temperatures <= 50 degrees Fahrenheit and a minimum wind speed > 3.0 mph.
 
 Returns:
 - `NaN` if `temp` is greater than 50.0 degress Fahrenheit
@@ -101,8 +99,7 @@ The current humidity in percent (0.0 - 100.0).
 
 Calculates the heat index in degrees Celsius.
 
-**Remark:**
-Note that heat index calculation is only feasible for high temperatures >= 27 degrees Celsius and a minimum humidity >= 40%.
+**Note:** Heat index calculation is only feasible for high temperatures >= 27 degrees Celsius and a minimum humidity >= 40%.
 
 Returns:
 - `NaN` if `temp` is lower than 27. degress Celsius or `humidity` is lower than 40.0
@@ -124,8 +121,7 @@ The current humidity in percent (0.0 - 100.0).
 
 Calculates the heat index in degrees Fahrenheit.
 
-**Remark:**
-Note that heat index calculation is only feasible for high temperatures >= 80 degrees Fahrenheit and a minimum humidity >= 40%.
+**Note:** Heat index calculation is only feasible for high temperatures >= 80 degrees Fahrenheit and a minimum humidity >= 40%.
 
 Returns:
 - `NaN` if `temp` is lower than 80.0 degress Fahrenheit or `humidity` is lower than 40.0

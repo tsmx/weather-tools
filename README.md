@@ -147,6 +147,35 @@ The current humidity in percent (0.0 - 100.0).
 
 #### degreesToDirection(deg)
 
+Converts degrees to the closest matching compass direction, e.g. 0 to `N`, 35 to `NE`, 301 to `WNW` and so on.
+
+A 32-point compass rose is used for the conversion.
+
+| Degree | Direction / returned value|
+|--------|---------------------------|
+| 0.0    | `N`                       |
+| 22.5   | `NNE`                     |
+| 45.0   | `NE`                      |
+| 67.5   | `ENE`                     |
+| 90.0   | `E`                       |
+| 112.5  | `ESE`                     |
+| 135.0  | `SE`                      |
+| 157.5  | `SSE`                     |
+| 180.0  | `S`                       |
+| 202.5  | `SSW`                     |
+| 225.0  | `SW`                      |
+| 247.5  | `WSW`                     |
+| 270.0  | `W`                       |
+| 292.5  | `WNW`                     |
+| 315.0  | `NW`                      |
+| 337.5  | `NNW`                     |
+
+##### deg
+
+Type: `number`
+
+Number of degrees to be converted
+
 #### fahrenheitToCelsius(fahrenheit)
 
 #### celsiusToFahrenheit(celsius)

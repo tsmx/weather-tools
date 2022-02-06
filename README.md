@@ -25,7 +25,7 @@ const tempC = wt.fahrenheitToCelsius(tempF);
 const dewPoint = wt.dewPoint(tempC, hum);
 ```
 
-For details look the API decsriptions for:
+For details look the API descriptions for:
 - [Wind Chill](#wind-chill-functions)
 - [Dew Point](#dew-point-functions)
 - [Heat Index](#heat-index-functions)

@@ -45,7 +45,7 @@ const kmhToMph = (kmh) => {
 
 /**
  * Converts Fahrenheit to Celsius
- * @param {number} celsius temperature in Fahrenheit
+ * @param {number} fahrenheit temperature in Fahrenheit
  * @returns {number} temperature in Celsius
  */
 const fahrenheitToCelsius = (fahrenheit) => {

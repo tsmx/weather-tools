@@ -1,6 +1,6 @@
 {
   "name": "@tsmx/weather-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toolset for calculating wind chill, dew point, heat index and more.",
   "main": "weather-tools.js",
   "repository": {
@@ -9,18 +9,24 @@
   },
   "author": "tsmx <dev@tsmx.net>",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage"
   },
   "keywords": [
     "weather",
+    "weather-station",
     "wind chill",
     "dew point",
     "heat index",
     "fahrenheit",
     "celsius",
-    "wind direction"
+    "wind direction",
+    "compass direction"
   ],
   "devDependencies": {
     "jest": "^27.4.7"

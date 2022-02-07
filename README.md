@@ -1,6 +1,8 @@
 # [**@tsmx/weather-tools**](https://github.com/tsmx/weather-tools)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![npm (scoped)](https://img.shields.io/npm/v/@tsmx/weather-tools)
+![node-current (scoped)](https://img.shields.io/node/v/@tsmx/weather-tools)
 [![Build Status](https://img.shields.io/github/workflow/status/tsmx/weather-tools/git-ci-build)](https://img.shields.io/github/workflow/status/tsmx/weather-tools/git-ci-build)
 [![Coverage Status](https://coveralls.io/repos/github/tsmx/weather-tools/badge.svg?branch=master)](https://coveralls.io/github/tsmx/weather-tools?branch=master)
 

@@ -28,7 +28,7 @@ const HEAT_INDEX_CONSTS = {
 /**
  * Converts MPH to KMH
  * @param {number} mph speed in MPH
- * @returns speed in KMH
+ * @returns {number} speed in KMH
  */
 const mphToKmh = (mph) => {
     return mph * MPH_IN_KMH;
@@ -37,7 +37,7 @@ const mphToKmh = (mph) => {
 /**
  * Converts KMH to MPH
  * @param {number} kmh speed in KMH
- * @returns speed in MPH
+ * @returns {number} speed in MPH
  */
 const kmhToMph = (kmh) => {
     return kmh / MPH_IN_KMH;
@@ -46,7 +46,7 @@ const kmhToMph = (kmh) => {
 /**
  * Converts Fahrenheit to Celsius
  * @param {number} celsius temperature in Fahrenheit
- * @returns temperature in Celsius
+ * @returns {number} temperature in Celsius
  */
 const fahrenheitToCelsius = (fahrenheit) => {
     return (fahrenheit - 32) * 5 / 9;
@@ -55,7 +55,7 @@ const fahrenheitToCelsius = (fahrenheit) => {
 /**
  * Converts Celsius to Fahrenheit
  * @param {number} celsius temperature in Celsius
- * @returns temperature in Fahrenheit
+ * @returns {number} temperature in Fahrenheit
  */
 const celsiusToFahrenheit = (celsius) => {
     return (celsius * 9 / 5) + 32;
@@ -68,7 +68,7 @@ const celsiusToFahrenheit = (celsius) => {
  * Calculates the wind chill in Celsius
  * @param {number} temp temperature in Celsius
  * @param {number} speed wind speed in KMH
- * @returns 
+ * @returns {number} wind chill in Celsius
  */
 const windchillCelsius = (temp, speed) => {
     if (temp > 10.0) return NaN;
@@ -80,7 +80,7 @@ const windchillCelsius = (temp, speed) => {
  * Calculates the wind chill in Fahrenheit
  * @param {number} temp temperature in Fahrenheit
  * @param {number} speed wind speed in MPH
- * @returns 
+ * @returns {number} wind chill in Fahrenheit
  */
 const windchillFahrenheit = (temp, speed) => {
     if (temp > 50.0) return NaN;
@@ -113,7 +113,7 @@ const dewPointHelperFunction = (temp, humidity) => {
  * Calculates the dew point.
  * @param {number} temp temperature in Celsius
  * @param {number} humidity humidity in percent
- * @returns dew point in Celsius
+ * @returns {number} dew point in Celsius
  */
 const dewPoint = (temp, humidity) => {
     const magnusConsts = getMagnusConstants(temp);
@@ -124,6 +124,11 @@ const dewPoint = (temp, humidity) => {
 // Wind direction functions
 // Reference: https://www.campbellsci.com/blog/convert-wind-directions
 
+/**
+ * Converts degrees to a compass direction
+ * @param {number} deg 
+ * @returns {string} the compass direction
+ */
 const degreesToDirection = (deg) => {
     return COMPASS_DIRECTIONS[Math.round((deg % 360) / 22.5)];
 }
@@ -147,7 +152,7 @@ const heatIndex = (temp, humidity, consts) => {
  * Calculates the heat index in Celsius.
  * @param {number} temp temperature in Celsius
  * @param {number} humidity humidity in percent
- * @returns heat index in Celsius
+ * @returns {number} heat index in Celsius
  */
 const heatIndexCelsius = (temp, humidity) => {
     if (temp < 27 || humidity < 40) return NaN;
@@ -158,7 +163,7 @@ const heatIndexCelsius = (temp, humidity) => {
  * Calculates the heat index in Fahrenheit.
  * @param {number} temp temperature in Fahrenheit
  * @param {number} humidity humidity in percent
- * @returns heat index in Fahrenheit
+ * @returns {number} heat index in Fahrenheit
  */
 const heatIndexFahrenheit = (temp, humidity) => {
     if (temp < 80 || humidity < 40) return NaN;

@@ -108,7 +108,7 @@ Calculates the heat index in degrees Celsius.
 **Note:** Heat index calculation is only feasible for high temperatures >= 27 degrees Celsius and a minimum humidity >= 40%.
 
 Returns:
-- `NaN` if `temp` is lower than 27. degress Celsius or `humidity` is lower than 40.0
+- `NaN` if `temp` is lower than 27.0 degress Celsius or `humidity` is lower than 40.0
 - the calculated heat index otherwise
 
 ##### temp

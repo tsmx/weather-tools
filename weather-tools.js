@@ -1,4 +1,5 @@
 const MPH_IN_KMH = 1.60934;
+const INCH_IN_MM = 25.4;
 const COMPASS_DIRECTIONS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'];
 const HEAT_INDEX_CONSTS = {
     celsius: {
@@ -59,6 +60,24 @@ const fahrenheitToCelsius = (fahrenheit) => {
  */
 const celsiusToFahrenheit = (celsius) => {
     return (celsius * 9 / 5) + 32;
+}
+
+/**
+ * Converts inches to millimeters
+ * @param {number} inch value in inches
+ * @returns {number} values in millimeters
+ */
+const inchToMillimeter = (inch) => {
+    return inch * INCH_IN_MM;
+}
+
+/**
+ * Converts millimeters to inches
+ * @param {number} millimeter value in millimeters
+ * @returns {number} values in inches
+ */
+const millimeterToInch = (millimeter) => {
+    return millimeter / INCH_IN_MM;
 }
 
 // Wind Chill functions
@@ -176,6 +195,8 @@ module.exports.windchillCelsius = windchillCelsius;
 module.exports.windchillFahrenheit = windchillFahrenheit;
 module.exports.mphToKmh = mphToKmh;
 module.exports.kmhToMph = kmhToMph;
+module.exports.inchToMillimeter = inchToMillimeter;
+module.exports.millimeterToInch = millimeterToInch;
 module.exports.dewPoint = dewPoint;
 module.exports.degreesToDirection = degreesToDirection;
 module.exports.heatIndexCelsius = heatIndexCelsius;

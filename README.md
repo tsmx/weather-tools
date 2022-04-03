@@ -15,6 +15,7 @@ Provides the following functionalities:
 - Degree to compass direction conversion
 - Fahrenheit <> Celsius conversion
 - MPH <> KMH conversion
+- Inch <> Millimeter conversion
 
 ## Usage
 
@@ -219,6 +220,26 @@ Converts KMH to MPH.
 Type: `number`
 
 The value to be converted in KMH.
+
+#### inchToMillimeter(inch)
+
+Converts inches to millimeters.
+
+##### inch
+
+Type: `number`
+
+The value to be converted in millimeters.
+
+#### millimeterToInch(millimeter)
+
+Converts millimeters to inches.
+
+##### millimeter
+
+Type: `number`
+
+The value to be converted in inches.
 
 ## References
 

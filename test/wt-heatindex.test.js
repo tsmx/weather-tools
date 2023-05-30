@@ -9,13 +9,13 @@ describe('weather-tools wind chill test suite', () => {
         { temp: 27, humidity: 40, hi: 27 },
         { temp: 31, humidity: 65, hi: 36 },
         { temp: 30, humidity: 100, hi: 44 }
-    ]
+    ];
 
     const heatIndexRefFahrenheit = [
         { temp: 80, humidity: 40, hi: 80 },
         { temp: 87, humidity: 68, hi: 97 },
         { temp: 85, humidity: 100, hi: 107 }
-    ]
+    ];
 
     it('tests heat index calculation for celsius', () => {
         for (let { temp, humidity, hi } of heatIndexRefCelsius) {

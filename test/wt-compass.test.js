@@ -28,7 +28,7 @@ describe('weather-tools compass/wind direction test suite', () => {
         { deg: 292.5, dir: 'WNW' },
         { deg: 315, dir: 'NW' },
         { deg: 337.5, dir: 'NNW' }
-    ]
+    ];
 
     it('tests degrees to compass direction translation', () => {
         for (let { deg, dir } of degreeDirectionRef) {

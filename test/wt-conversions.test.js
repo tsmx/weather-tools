@@ -13,7 +13,7 @@ describe('weather-tools unit conversion test suite', () => {
             mph: 15.0,
             kmh: 24.140
         }
-    }
+    };
 
     const temperatureRefValues = {
         celsiusToFahrenheit: {
@@ -24,7 +24,7 @@ describe('weather-tools unit conversion test suite', () => {
             fahrenheit: 72,
             celsius: 22.222
         }
-    }
+    };
 
     const lengthRefValues = {
         inchToMillimeter: {
@@ -35,7 +35,7 @@ describe('weather-tools unit conversion test suite', () => {
             millimeter: 57,
             inch: 2.24409
         }
-    }
+    };
 
     it('tests a mph-to-kmh conversion', () => {
         expect(round2(wt.mphToKmh(speedRefValues.mphToKmh.mph))).toEqual(round2(speedRefValues.mphToKmh.kmh));

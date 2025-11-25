@@ -24,7 +24,7 @@ const HEAT_INDEX_CONSTS = {
         c8: 8.5282e-4,
         c9: -1.99e-6
     }
-}
+};
 
 /**
  * Converts MPH to KMH
@@ -33,7 +33,7 @@ const HEAT_INDEX_CONSTS = {
  */
 const mphToKmh = (mph) => {
     return mph * MPH_IN_KMH;
-}
+};
 
 /**
  * Converts KMH to MPH
@@ -42,7 +42,7 @@ const mphToKmh = (mph) => {
  */
 const kmhToMph = (kmh) => {
     return kmh / MPH_IN_KMH;
-}
+};
 
 /**
  * Converts Fahrenheit to Celsius
@@ -51,7 +51,7 @@ const kmhToMph = (kmh) => {
  */
 const fahrenheitToCelsius = (fahrenheit) => {
     return (fahrenheit - 32) * 5 / 9;
-}
+};
 
 /**
  * Converts Celsius to Fahrenheit
@@ -60,7 +60,7 @@ const fahrenheitToCelsius = (fahrenheit) => {
  */
 const celsiusToFahrenheit = (celsius) => {
     return (celsius * 9 / 5) + 32;
-}
+};
 
 /**
  * Converts inches to millimeters
@@ -69,7 +69,7 @@ const celsiusToFahrenheit = (celsius) => {
  */
 const inchToMillimeter = (inch) => {
     return inch * INCH_IN_MM;
-}
+};
 
 /**
  * Converts millimeters to inches
@@ -78,7 +78,7 @@ const inchToMillimeter = (inch) => {
  */
 const millimeterToInch = (millimeter) => {
     return millimeter / INCH_IN_MM;
-}
+};
 
 // Wind Chill functions
 // Reference: https://en.wikipedia.org/wiki/Wind_chill
@@ -93,7 +93,7 @@ const windchillCelsius = (temp, speed) => {
     if (temp > 10.0) return NaN;
     if (speed <= 4.8) return temp;
     return 13.12 + (0.6215 * temp) + ((0.3965 * temp - 11.37) * Math.pow(speed, 0.16));
-}
+};
 
 /**
  * Calculates the wind chill in Fahrenheit
@@ -105,7 +105,7 @@ const windchillFahrenheit = (temp, speed) => {
     if (temp > 50.0) return NaN;
     if (speed <= 3.0) return temp;
     return 35.74 + (0.6215 * temp) + ((0.4275 * temp - 35.75) * Math.pow(speed, 0.16));
-}
+};
 
 // Dew Point functions
 // Reference: https://www.wetterochs.de/wetter/feuchte.html
@@ -113,20 +113,20 @@ const windchillFahrenheit = (temp, speed) => {
 const getMagnusConstants = (temp) => {
     if (temp >= 0.0) return { a: 7.5, b: 237.3 };
     else return { a: 7.6, b: 240.7 };
-}
+};
 
 const saturatedVaporPressure = (temp) => {
     const magnusConsts = getMagnusConstants(temp);
     return 6.1078 * Math.pow(10, ((magnusConsts.a * temp) / (magnusConsts.b + temp)));
-}
+};
 
 const vaporPressure = (temp, humidity) => {
     return humidity / 100 * saturatedVaporPressure(temp);
-}
+};
 
 const dewPointHelperFunction = (temp, humidity) => {
-    return Math.log10(vaporPressure(temp, humidity) / 6.1078)
-}
+    return Math.log10(vaporPressure(temp, humidity) / 6.1078);
+};
 
 /**
  * Calculates the dew point.
@@ -138,7 +138,7 @@ const dewPoint = (temp, humidity) => {
     const magnusConsts = getMagnusConstants(temp);
     const helper = dewPointHelperFunction(temp, humidity);
     return magnusConsts.b * helper / (magnusConsts.a - helper);
-}
+};
 
 // Wind direction functions
 // Reference: https://www.campbellsci.com/blog/convert-wind-directions
@@ -150,7 +150,7 @@ const dewPoint = (temp, humidity) => {
  */
 const degreesToDirection = (deg) => {
     return COMPASS_DIRECTIONS[Math.round((deg % 360) / 22.5)];
-}
+};
 
 // Heat Index functions
 // Reference: https://en.wikipedia.org/wiki/Heat_index
@@ -165,7 +165,7 @@ const heatIndex = (temp, humidity, consts) => {
         consts.c7 * Math.pow(temp, 2) * humidity +
         consts.c8 * temp * Math.pow(humidity, 2) +
         consts.c9 * Math.pow(temp, 2) * Math.pow(humidity, 2);
-}
+};
 
 /**
  * Calculates the heat index in Celsius.
@@ -176,7 +176,7 @@ const heatIndex = (temp, humidity, consts) => {
 const heatIndexCelsius = (temp, humidity) => {
     if (temp < 27 || humidity < 40) return NaN;
     return heatIndex(temp, humidity, HEAT_INDEX_CONSTS.celsius);
-}
+};
 
 /**
  * Calculates the heat index in Fahrenheit.
@@ -187,7 +187,7 @@ const heatIndexCelsius = (temp, humidity) => {
 const heatIndexFahrenheit = (temp, humidity) => {
     if (temp < 80 || humidity < 40) return NaN;
     return heatIndex(temp, humidity, HEAT_INDEX_CONSTS.fahrenheit);
-}
+};
 
 module.exports.fahrenheitToCelsius = fahrenheitToCelsius;
 module.exports.celsiusToFahrenheit = celsiusToFahrenheit;
